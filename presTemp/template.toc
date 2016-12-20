@@ -1,9 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {ngerman}
-\beamer@sectionintoc {1}{one}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{subOne}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{subOne}{5}{0}{1}
-\beamer@sectionintoc {2}{two}{6}{0}{2}
-\beamer@subsectionintoc {2}{1}{subTwo}{7}{0}{2}
-\beamer@subsectionintoc {2}{2}{subTwo}{8}{0}{2}
-\beamer@sectionintoc {3}{Literatur}{9}{0}{3}
