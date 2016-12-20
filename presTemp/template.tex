@@ -1,0 +1,130 @@
+\documentclass[compress]{beamer}
+
+\usetheme{Berlin}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%\usepackage[english]{babel}
+\usepackage[ngerman]{babel}
+\usepackage{eurosym}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{units}
+%\usepackage{bera}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{import}
+\usepackage{listings}
+%\usepackage{wasysym}
+
+\title{title of presentation}
+\author{your name}
+\institute[label]{university \\major}
+\date{08/06/2016}
+
+\makeatletter
+\makeatother
+
+\lstset{ %
+  language=R,                     % the language of the code
+  basicstyle=\footnotesize\ttfamily,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+%  keywordstyle=\color{blue},      % keyword style
+%  commentstyle=\color{green},   % comment style
+%  stringstyle=\color{blue},       % string literal style
+  %escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  escapeinside={(*@}{@*)},         
+  morekeywords={*,...}            % if you want to add more keywords to the set
+} 
+
+\renewcommand{\emph}[1]{\textbf{#1}}
+\newcommand{\ssp}[1]{	% ssp = Single Sub Point
+	\begin{itemize}\item #1\end{itemize}
+}
+
+%Bei neuer Section wird tableofcontents gezeigt.
+%subsection als kleinerer frametitle.
+\AtBeginSection[]                                                               
+{                                                                               
+\begin{frame}<beamer>                                                         
+\frametitle{Inhaltsverzeichnis}                                               
+\tableofcontents[currentsection,hideallsubsections]                        
+\end{frame}                                                                   
+}                                                                               
+                                                                                
+\begin{document}
+
+{
+\setbeamertemplate{currentsection, currentsubsection}{} 
+\begin{frame}
+\titlepage
+\end{frame}
+}
+\addtocounter{framenumber}{-1}
+
+%Inhaltsverzeichnis
+\begin{frame}
+\tableofcontents[hideallsubsections]
+\end{frame}
+
+
+\section{one}
+
+\subsection{subOne}
+\begin{frame}[fragile]
+\frametitle{title}
+\end{frame}
+
+\subsection{subOne}
+\begin{frame}
+\frametitle{title}
+\end{frame}
+
+\section{two}
+
+\subsection{subTwo}
+\begin{frame}
+\frametitle{title}	
+\end{frame}
+
+\subsection{subTwo}
+\begin{frame}
+\frametitle{title}
+\end{frame}
+
+%Quellen
+\section{Literatur}
+\subsection*{}
+
+\begin{frame}
+\frametitle{Literatur}
+\begin{small}
+\begin{thebibliography}{50}
+\bibitem[label]{name} Sympy, \url{www.sauce.de}		
+\end{thebibliography}
+\end{small}
+\end{frame}
+
+\begin{frame}
+last frame
+\end{frame}
+
+\end{document}
